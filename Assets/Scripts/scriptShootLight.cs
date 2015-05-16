@@ -20,6 +20,7 @@ public class scriptShootLight : MonoBehaviour {
 			oneShot = false;
 		}
 		if(Input.GetAxisRaw("Fire1") == 0.1f && oneShot == false){
+			transform.GetChild(1).GetChild(0).gameObject.animation.Play();
 			Instantiate(lightBullet,camera.position + camera.forward,camera.rotation);
 			oneShot = true;
 
