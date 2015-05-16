@@ -12,6 +12,7 @@ public class scriptGameManager : MonoBehaviour {
 	private Vector3 player2Spawn;
 	private Vector3 player3Spawn;
 	private Vector3 player4Spawn;
+	public int deadPlayers = 0;
 
 	void Start(){
 		DontDestroyOnLoad(this.gameObject);
@@ -95,7 +96,19 @@ public class scriptGameManager : MonoBehaviour {
 		}
 	}
 
-	void Update(){
+	void Update()
+	{
+
+	}
+
+	public void GameOver()
+	{
+		deadPlayers++;
+
+		if(deadPlayers == 3)
+		{
+			Application.LoadLevel("Main Menu");
+		}
 
 	}
 }
