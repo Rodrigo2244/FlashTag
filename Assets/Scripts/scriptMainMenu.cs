@@ -17,7 +17,7 @@ public class scriptMainMenu : MonoBehaviour {
 	}
 
 	void Play(){
-		//Application.LoadLevel();
+		Application.LoadLevel("Practice");
 	}
 
 	void Exit(){
