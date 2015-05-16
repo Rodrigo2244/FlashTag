@@ -6,8 +6,8 @@ public class scriptShootLightP3 : MonoBehaviour {
 	Transform camera;
 	public GameObject lightBullet;
 	private bool oneShot = false;
-	
-	// Use this for initialization
+	public AudioClip shoot;
+
 	void Start () {
 		camera = transform.GetChild(1);
 	}
@@ -23,7 +23,7 @@ public class scriptShootLightP3 : MonoBehaviour {
 			transform.GetChild(1).GetChild(0).gameObject.animation.Play();
 			Instantiate(lightBullet,camera.position + camera.forward,camera.rotation);
 			oneShot = true;
-			
+			AudioSource.PlayClipAtPoint(shoot,transform.position);
 		}
 	}
 }
