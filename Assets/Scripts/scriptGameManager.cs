@@ -12,6 +12,7 @@ public class scriptGameManager : MonoBehaviour {
 	private Vector3 player2Spawn;
 	private Vector3 player3Spawn;
 	private Vector3 player4Spawn;
+	public int deadPlayers = 0;
 
 	void Start(){
 		DontDestroyOnLoad(this.gameObject);
@@ -81,7 +82,7 @@ public class scriptGameManager : MonoBehaviour {
 				player3Spawn = playerActivate.transform.position;
 				playerCam = GameObject.Find("P3Cam");
 				playerCamSet = playerCam.GetComponent<Camera>();
-				playerCamSet.rect = new Rect(0 , 0, 1, 0.5f);
+				playerCamSet.rect = new Rect(0 , 0, 0.5f, 0.5f);
 
 				playerActivate = GameObject.Find("Player4");
 				player4Spawn = playerActivate.transform.position;
@@ -95,7 +96,19 @@ public class scriptGameManager : MonoBehaviour {
 		}
 	}
 
-	void Update(){
+	void Update()
+	{
+
+	}
+
+	public void GameOver()
+	{
+		deadPlayers++;
+
+		if(deadPlayers == 3)
+		{
+			Application.LoadLevel("Main Menu");
+		}
 
 	}
 }
