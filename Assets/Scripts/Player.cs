@@ -24,30 +24,33 @@ public class Player : MonoBehaviour
         TestForDamage(other.gameObject);
     }
 
-    private void TestForDamage(GameObject gameObject)
+    private void TestForDamage(GameObject otherGameObject)
     {
-        if(gameObject.tag != "Respawn")
+        if(otherGameObject.tag != "Respawn")
             return;
+
+        Destroy(otherGameObject);
 
         health -= damage;
 
-        // Test for death
         if (health <= 0)
             StartCoroutine("ResetPlayer");
     }
 
     private IEnumerator ResetPlayer()
     {
-        //yield return new WaitForSeconds(5.0f);
+        // Potentially deactivate gameObject and wait for respond
+        // yield return new WaitForSeconds(5.0f);
 
         lives--;
 
         if (lives == 0)
+        {
             Destroy(gameObject);
+            yield return null;
+        }
 
         health = 100;
         transform.position = origin;
-
-        yield return null;
     }
 }
