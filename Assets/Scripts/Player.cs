@@ -39,9 +39,6 @@ public class Player : MonoBehaviour
 
     private IEnumerator ResetPlayer()
     {
-        // Potentially deactivate gameObject and wait for respond
-        // yield return new WaitForSeconds(5.0f);
-
         lives--;
 
         if (lives == 0)
