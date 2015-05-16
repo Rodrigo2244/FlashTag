@@ -8,4 +8,10 @@ public class scriptGameManager : MonoBehaviour {
 	void Start(){
 		DontDestroyOnLoad(this.gameObject);
 	}
+
+	void OnLevelWasLoaded(int level){
+		if(level == 1){
+			//Write code here
+		}
+	}
 }
