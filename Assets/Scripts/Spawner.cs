@@ -6,8 +6,7 @@ public class Spawner : MonoBehaviour
     enum SpawnType
     {
         Pyramid,
-        ThreeSidedColumn,
-        Jeff
+        ThreeSidedColumn
     }
 
     private SpawnType spawnedType;
