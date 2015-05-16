@@ -16,7 +16,7 @@ public class scriptShootLight : MonoBehaviour {
 		Debug.DrawLine(camera.position, camera.position + camera.forward,Color.red);
 
 		if(Input.GetMouseButtonDown(0)){
-			Instantiate(lightBullet,camera.forward,camera.rotation);
+			Instantiate(lightBullet,camera.position + camera.forward,camera.rotation);
 		}
 	}
 }
