@@ -7,12 +7,6 @@ public class scriptShootLight : MonoBehaviour {
 	public GameObject lightBullet;
 	private bool oneShot = false;
 
-    void Awake()
-    {
-        // Margarita ;)
-        lightBullet = (GameObject)Resources.Load("Jeff");
-    }
-
 	void Start () {
 		camera = transform.GetChild(1);
 	}
