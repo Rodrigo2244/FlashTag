@@ -81,7 +81,7 @@ public class scriptGameManager : MonoBehaviour {
 				player3Spawn = playerActivate.transform.position;
 				playerCam = GameObject.Find("P3Cam");
 				playerCamSet = playerCam.GetComponent<Camera>();
-				playerCamSet.rect = new Rect(0 , 0, 1, 0.5f);
+				playerCamSet.rect = new Rect(0 , 0, 0.5f, 0.5f);
 
 				playerActivate = GameObject.Find("Player4");
 				player4Spawn = playerActivate.transform.position;
