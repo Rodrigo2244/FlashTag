@@ -5,7 +5,6 @@ public class scriptShootLightP4 : MonoBehaviour {
 	
 	Transform camera;
 	public GameObject lightBullet;
-    private GameObject jeff;
 	private bool oneShot = false;
 	
 	// Use this for initialization
