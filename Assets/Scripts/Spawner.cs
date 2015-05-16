@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
 
 	void Start () 
     {
-        spawnedObject = (GameObject)Instantiate(loadedObject, transform.position, Quaternion.Euler(270,0,0));
+        spawnedObject = (GameObject)Instantiate(loadedObject, transform.position, Quaternion.Euler(270, 0, 0));
 	}
 
     private void CreateTypeArray()
