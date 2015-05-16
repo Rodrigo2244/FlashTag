@@ -1,36 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Spawner : MonoBehaviour 
-{
-    enum SpawnType
-    {
-        Pyramid,
-        ThreeSidedColumn,
-        Jeff
-    }
+public class Spawner : MonoBehaviour{
+	public GameObject[] layouts;
+	public Quaternion[] rotations;
 
-    private SpawnType spawnedType;
-    private SpawnType[] spawnTypes;
-    private GameObject loadedObject;
-    private GameObject spawnedObject;
-
-    void Awake()
-    {
-        CreateTypeArray();
-
-        int index = Random.Range(0, spawnTypes.Length);
-
-        loadedObject = (GameObject)Resources.Load(spawnTypes[index].ToString());
-    }
-
-	void Start () 
-    {
-        spawnedObject = (GameObject)Instantiate(loadedObject, transform.position, Quaternion.Euler(270, 0, 0));
+	void Start(){
+		rotations = new Quaternion[4]{new Quaternion(0,0,0,0),new Quaternion(0,90,0,0),new Quaternion(0,180,0,0),new Quaternion(0,270,0,0)};
+		Instantiate(layouts[Random.Range(0,layouts.Length-1)],new Vector3(0,0,0),rotations[Random.Range(0,rotations.Length-1)]);
+		Instantiate(layouts[Random.Range(0,layouts.Length-1)],new Vector3(0,0,24),rotations[Random.Range(0,rotations.Length-1)]);
+		Instantiate(layouts[Random.Range(0,layouts.Length-1)],new Vector3(-24,0,0),rotations[Random.Range(0,rotations.Length-1)]);
+		Instantiate(layouts[Random.Range(0,layouts.Length-1)],new Vector3(-24,0,24),rotations[Random.Range(0,rotations.Length-1)]);
 	}
-
-    private void CreateTypeArray()
-    {
-        spawnTypes = (SpawnType[])System.Enum.GetValues(typeof(SpawnType));
-    }
 }
