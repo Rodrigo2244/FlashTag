@@ -14,7 +14,7 @@ public class scriptLighObject : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		if(col.gameObject.name == "Light Bullet"){
+		if(col.gameObject.tag == "Respawn"){
 			Debug.Log("hit");
 			light.enabled = true;
 		}
