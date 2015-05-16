@@ -10,6 +10,7 @@ public class scriptShootLight : MonoBehaviour {
     void Awake()
     {
         // Margarita ;)
+        // MMM
         lightBullet = (GameObject)Resources.Load("Jeff");
     }
 
