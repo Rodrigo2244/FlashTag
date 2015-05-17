@@ -25,6 +25,8 @@ ModelImporter:
     100038: //RootNode
     100040: Walls 1
     100042: polySurface2
+    100044: Audience
+    100046: AudienceRails
     400000: wall_01
     400002: wall_02
     400004: wall_03
@@ -47,6 +49,8 @@ ModelImporter:
     400038: //RootNode
     400040: Walls 1
     400042: polySurface2
+    400044: Audience
+    400046: AudienceRails
     2300000: wall_01
     2300002: wall_02
     2300004: wall_03
@@ -67,6 +71,9 @@ ModelImporter:
     2300034: wall_19
     2300036: Wall_Exterior
     2300038: polySurface2
+    2300040: Audience
+    2300042: AudienceRails
+    2300044: Walls 1
     3300000: wall_01
     3300002: wall_02
     3300004: wall_03
@@ -87,6 +94,9 @@ ModelImporter:
     3300034: wall_19
     3300036: Wall_Exterior
     3300038: polySurface2
+    3300040: Audience
+    3300042: AudienceRails
+    3300044: Walls 1
     4300000: Wall_Exterior
     4300002: wall_14
     4300004: wall_13
@@ -107,6 +117,9 @@ ModelImporter:
     4300034: wall_18
     4300036: wall_19
     4300038: polySurface2
+    4300040: Walls
+    4300042: Audience
+    4300044: AudienceRails
     9500000: //RootNode
   materials:
     importMaterials: 1
