@@ -56,9 +56,9 @@ public class Player : MonoBehaviour
 
         if (lives == 0)
 		{
-
-            Destroy(gameObject);
 			manager.GameOver();
+            Destroy(gameObject);
+
 		}
 		 
         health = 100;

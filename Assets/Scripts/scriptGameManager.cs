@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class scriptGameManager : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class scriptGameManager : MonoBehaviour {
 	public int deadPlayers = 0;
 	public bool stalactites;
 	public bool invisibility;
+	private Text playerWin;
 
 
 	void Start(){
@@ -114,23 +116,31 @@ public class scriptGameManager : MonoBehaviour {
 
 		if(deadPlayers == playerNum - 1)
 		{
-			print(players.Length);
-			for(int i = 0 ; i < players.Length; i++)
-			{
-				if(players[i] != null)
-				{
-					print(players[i].name);
-				}
-
-			}
+			StartCoroutine("DeathDelay");
 			StartCoroutine("BackToMainMenu");
 		}
 
 	}
 
+	private IEnumerator DeathDelay()
+	{
+		yield return new WaitForSeconds(0.1f);
+		for(int i = 0 ; i < players.Length; i++)
+		{
+			if(players[i] != null)
+			{
+				print(players[i].name + " WINS");
+			}
+			
+		}
+			print(players.Length);
+		
+	}
+
 	private IEnumerator BackToMainMenu()
 	{
 		yield return new WaitForSeconds(5f);
+		Destroy(this.gameObject);
 		Application.LoadLevel("Main Menu");
 	}
 }
