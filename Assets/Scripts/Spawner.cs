@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour{
 	public Quaternion[] rotations;
 	public Quaternion[] otherRotations;
 	public scriptGameManager manager;
+	public Material visibleMat;
 
 	void Start(){
 		if(GameObject.Find("_Game Manager") != null){
@@ -25,6 +26,16 @@ public class Spawner : MonoBehaviour{
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(0,8.44f,24),otherRotations[Random.Range(0,otherRotations.Length)]);
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(-24,8.44f,0),otherRotations[Random.Range(0,otherRotations.Length)]);
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(-24,8.44f,24),otherRotations[Random.Range(0,otherRotations.Length)]);
+		}
+
+		if(!manager.invisibility){
+			GameObject[] geometries = GameObject.FindGameObjectsWithTag("Geometry");
+
+			for(int i = 0; i < geometries.Length; i++){
+				geometries[i].renderer.enabled = true;
+				geometries[i].renderer.material = visibleMat;
+				geometries[i].GetComponent<scriptLightObject>().enabled = false;
+			}
 		}
 	}
 }
