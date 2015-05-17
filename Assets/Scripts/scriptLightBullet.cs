@@ -7,7 +7,7 @@ public class scriptLightBullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rigidbody.AddForce(transform.forward*500);
+		rigidbody.AddForce(transform.forward*2000);
 		StartCoroutine(Die ());
 	}
 	
