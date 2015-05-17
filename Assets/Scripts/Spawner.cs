@@ -38,7 +38,7 @@ public class Spawner : MonoBehaviour{
 			for(int i = 0; i < geometries.Length; i++){
 				geometries[i].renderer.enabled = true;
 				geometries[i].renderer.material = visibleMat;
-				geometries[i].GetComponent<scriptLightObject>().enabled = false;
+				geometries[i].GetComponent<scriptLightObject>().invisibility= false;
 			}
 		}
 	}
