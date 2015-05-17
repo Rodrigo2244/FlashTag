@@ -71,17 +71,16 @@ public class Player : MonoBehaviour
 		light.enabled = false;
 	}
 
-    private IEnumerator WeaponBlink()
+    /*private IEnumerator WeaponBlink()
     {
         for (int i = 0; i < 5; i++)
         {
             // This is not working - GG Andrew
-            /*
             weaponMaterial.color = Color.white;
             yield return new WaitForSeconds(0.5f);
             weaponMaterial.color = originalColor;
-            */
+
         }
-    }
+    }*/
 }
 
