@@ -8,8 +8,11 @@ public class scriptMainMenu : MonoBehaviour {
 	Text stalactitesDisplay;
 	Text invisibleDisplay;
 	scriptGameManager gameManager;
+	public AudioClip submit;
 
 	void Start(){
+		Screen.showCursor = false;
+
 		playerNumDisplay = GameObject.Find("Player Num").transform.GetChild(0).GetComponent<Text>();
 		stalactitesDisplay = GameObject.Find("Stalactites").transform.GetChild(0).GetComponent<Text>();
 		invisibleDisplay = GameObject.Find("Invisibility").transform.GetChild(0).GetComponent<Text>();
@@ -21,14 +24,18 @@ public class scriptMainMenu : MonoBehaviour {
 	}
 
 	void Play(){
+		AudioSource.PlayClipAtPoint(submit,transform.position);
 		Application.LoadLevel("Practice");
 	}
 
 	void Exit(){
+		AudioSource.PlayClipAtPoint(submit,transform.position);
 		Application.Quit();
 	}
 
 	void Stalactite(){
+		AudioSource.PlayClipAtPoint(submit,transform.position);
+
 		gameManager.stalactites = !gameManager.stalactites;
 
 		if(gameManager.stalactites){
@@ -39,6 +46,8 @@ public class scriptMainMenu : MonoBehaviour {
 	}
 
 	void Invisiblity(){
+		AudioSource.PlayClipAtPoint(submit,transform.position);
+
 		gameManager.invisibility = !gameManager.invisibility;
 		
 		if(gameManager.invisibility){
@@ -49,6 +58,9 @@ public class scriptMainMenu : MonoBehaviour {
 	}
 
 	void ChangePlayerNum(){
+
+		AudioSource.PlayClipAtPoint(submit,transform.position);
+
 		if(gameManager.playerNum != 4){
 			gameManager.playerNum++;
 		} else {
