@@ -114,6 +114,7 @@ public class scriptGameManager : MonoBehaviour {
 
 		if(deadPlayers == playerNum - 1)
 		{
+			print(players.Length);
 			StartCoroutine("BackToMainMenu");
 		}
 
