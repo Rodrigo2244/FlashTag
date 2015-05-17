@@ -3,12 +3,14 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-    public int ammo;
     public int health;
     public int damage;
     public int lives;
+    public GameObject weapon;
 
     private Vector3 origin;
+    private Color originalColor;
+    private Material weaponMaterial;
 
     void Awake()
     {
@@ -17,6 +19,13 @@ public class Player : MonoBehaviour
         lives = 2;
 
         origin = transform.position;
+        weaponMaterial = weapon.GetComponent<MeshRenderer>().materials[2];
+    }
+
+    void Start()
+    {
+        originalColor = weaponMaterial.color;
+        StartCoroutine("WeaponBlink");
     }
 
     void OnCollisionEnter(Collision other)
@@ -33,6 +42,8 @@ public class Player : MonoBehaviour
 
         health -= damage;
 
+        StartCoroutine("AnimatePointLight");
+
         if (health <= 0)
             StartCoroutine("ResetPlayer");
     }
@@ -42,12 +53,35 @@ public class Player : MonoBehaviour
         lives--;
 
         if (lives == 0)
-        {
             Destroy(gameObject);
-            yield return null;
-        }
-
+            
         health = 100;
         transform.position = origin;
+
+        yield return null;
+    }
+
+    private IEnumerator AnimatePointLight()
+    {
+        light.enabled = true;
+		animation.Play("LightObject");
+
+		yield return new WaitForSeconds(10f);
+
+		light.enabled = false;
+	}
+
+    private IEnumerator WeaponBlink()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            // This is not working - GG Andrew
+            /*
+            weaponMaterial.color = Color.white;
+            yield return new WaitForSeconds(0.5f);
+            weaponMaterial.color = originalColor;
+            */
+        }
     }
 }
+
