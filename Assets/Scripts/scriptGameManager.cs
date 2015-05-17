@@ -14,6 +14,7 @@ public class scriptGameManager : MonoBehaviour {
 	private Vector3 player4Spawn;
 	public int deadPlayers = 0;
 	public bool stalactites;
+	public bool invisibility;
 
 	void Start(){
 		DontDestroyOnLoad(this.gameObject);

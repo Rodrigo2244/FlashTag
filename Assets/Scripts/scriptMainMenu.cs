@@ -6,16 +6,18 @@ public class scriptMainMenu : MonoBehaviour {
 
 	Text playerNumDisplay;
 	Text stalactitesDisplay;
+	Text invisibleDisplay;
 	scriptGameManager gameManager;
 
 	void Start(){
 		playerNumDisplay = GameObject.Find("Player Num").transform.GetChild(0).GetComponent<Text>();
 		stalactitesDisplay = GameObject.Find("Stalactites").transform.GetChild(0).GetComponent<Text>();
+		invisibleDisplay = GameObject.Find("Invisibility").transform.GetChild(0).GetComponent<Text>();
 		gameManager = GameObject.Find("_Game Manager").GetComponent<scriptGameManager>();
 	}
 
 	void Update(){
-		playerNumDisplay.text = gameManager.playerNum.ToString();
+		playerNumDisplay.text = "Players: " + gameManager.playerNum.ToString();
 	}
 
 	void Play(){
@@ -30,9 +32,19 @@ public class scriptMainMenu : MonoBehaviour {
 		gameManager.stalactites = !gameManager.stalactites;
 
 		if(gameManager.stalactites){
-			stalactitesDisplay.text = "On";
+			stalactitesDisplay.text = "Stalactites: On";
 		} else {
-			stalactitesDisplay.text = "Off";
+			stalactitesDisplay.text = "Stalactites: Off";
+		}
+	}
+
+	void Invisiblity(){
+		gameManager.invisibility = !gameManager.invisibility;
+		
+		if(gameManager.invisibility){
+			invisibleDisplay.text = "Invisibility: On";
+		} else {
+			invisibleDisplay.text = "Invisibility: Off";
 		}
 	}
 
