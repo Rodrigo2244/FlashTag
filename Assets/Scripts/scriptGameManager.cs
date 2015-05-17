@@ -115,6 +115,14 @@ public class scriptGameManager : MonoBehaviour {
 		if(deadPlayers == playerNum - 1)
 		{
 			print(players.Length);
+			for(int i = 0 ; i < players.Length; i++)
+			{
+				if(players[i] != null)
+				{
+					print(players[i].name);
+				}
+
+			}
 			StartCoroutine("BackToMainMenu");
 		}
 
