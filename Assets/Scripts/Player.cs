@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Vector3 origin;
     private Color originalColor;
     private Material weaponMaterial;
+	private scriptGameManager manager;
 
     void Awake()
     {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         lives = 2;
 
         origin = transform.position;
+		manager = GameObject.Find("_Game Manager").GetComponent<scriptGameManager>();
 //        weaponMaterial = weapon.GetComponent<MeshRenderer>().materials[2];
     }
 
@@ -53,8 +55,11 @@ public class Player : MonoBehaviour
         lives--;
 
         if (lives == 0)
+		{
+			manager.GameOver();
             Destroy(gameObject);
-            
+		}
+		 
         health = 100;
         transform.position = origin;
 
