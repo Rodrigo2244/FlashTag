@@ -1,52 +1,47 @@
 fileFormatVersion: 2
-guid: 30a86aebe4e4b6f4592313e7773f639f
+guid: 857ad4e01e77521459f9902da19e2ed9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Floor4
-    100002: obj1_col33_01
-    100004: obj2_col32_01
-    100006: obj3_col11_01
-    100008: obj4_col23_01
-    100010: obj5_col23_02
-    100012: obj6_13_01
-    100014: obj7_11_01
+    100000: Dune_01
+    100002: Dune_02
+    100004: Dune_03
+    100006: Dune_04
+    100008: Floor1
+    100010: obj5_col23_08
+    100012: obj5_col23_09
+    100014: Q6
     100016: //RootNode
-    100018: Q4
-    400000: Floor4
-    400002: obj1_col33_01
-    400004: obj2_col32_01
-    400006: obj3_col11_01
-    400008: obj4_col23_01
-    400010: obj5_col23_02
-    400012: obj6_13_01
-    400014: obj7_11_01
+    400000: Dune_01
+    400002: Dune_02
+    400004: Dune_03
+    400006: Dune_04
+    400008: Floor1
+    400010: obj5_col23_08
+    400012: obj5_col23_09
+    400014: Q6
     400016: //RootNode
-    400018: Q4
-    2300000: Floor4
-    2300002: obj1_col33_01
-    2300004: obj2_col32_01
-    2300006: obj3_col11_01
-    2300008: obj4_col23_01
-    2300010: obj5_col23_02
-    2300012: obj6_13_01
-    2300014: obj7_11_01
-    3300000: Floor4
-    3300002: obj1_col33_01
-    3300004: obj2_col32_01
-    3300006: obj3_col11_01
-    3300008: obj4_col23_01
-    3300010: obj5_col23_02
-    3300012: obj6_13_01
-    3300014: obj7_11_01
-    4300000: obj1_col33_01
-    4300002: obj2_col32_01
-    4300004: obj3_col11_01
-    4300006: obj4_col23_01
-    4300008: obj5_col23_02
-    4300010: obj6_13_01
-    4300012: obj7_11_01
-    4300014: Floor4
+    2300000: Dune_01
+    2300002: Dune_02
+    2300004: Dune_03
+    2300006: Dune_04
+    2300008: Floor1
+    2300010: obj5_col23_08
+    2300012: obj5_col23_09
+    3300000: Dune_01
+    3300002: Dune_02
+    3300004: Dune_03
+    3300006: Dune_04
+    3300008: Floor1
+    3300010: obj5_col23_08
+    3300012: obj5_col23_09
+    4300000: Floor1
+    4300002: Dune_01
+    4300004: Dune_02
+    4300006: Dune_03
+    4300008: obj5_col23_08
+    4300010: obj5_col23_09
+    4300012: Dune_04
     9500000: //RootNode
   materials:
     importMaterials: 1
