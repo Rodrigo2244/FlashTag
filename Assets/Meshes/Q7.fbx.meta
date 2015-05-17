@@ -16,7 +16,6 @@ ModelImporter:
     100020: obj7_11_011
     100022: obj7_11_09
     100024: //RootNode
-    100026: Q7
     400000: Floor1
     400002: obj3_col11_010
     400004: obj3_col11_011
@@ -29,8 +28,7 @@ ModelImporter:
     400018: obj7_11_010
     400020: obj7_11_011
     400022: obj7_11_09
-    400024: Q7
-    400026: //RootNode
+    400024: //RootNode
     2300000: Floor1
     2300002: obj3_col11_010
     2300004: obj3_col11_011

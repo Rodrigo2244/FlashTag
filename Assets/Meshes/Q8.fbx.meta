@@ -4,19 +4,17 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: Floor1
-    100002: Q8
-    100004: //RootNode
-    100006: wall_012
-    100008: wall_013
-    100010: wall_21
-    100012: wall_30
+    100002: //RootNode
+    100004: wall_012
+    100006: wall_013
+    100008: wall_21
+    100010: wall_30
     400000: Floor1
-    400002: Q8
-    400004: //RootNode
-    400006: wall_012
-    400008: wall_013
-    400010: wall_21
-    400012: wall_30
+    400002: //RootNode
+    400004: wall_012
+    400006: wall_013
+    400008: wall_21
+    400010: wall_30
     2300000: Floor1
     2300002: wall_012
     2300004: wall_013
