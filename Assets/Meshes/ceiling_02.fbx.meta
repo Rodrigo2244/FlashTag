@@ -1,52 +1,13 @@
 fileFormatVersion: 2
-guid: 30a86aebe4e4b6f4592313e7773f639f
+guid: 95dc3dd231ced9748b73aeb4f4b59cc0
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Floor4
-    100002: obj1_col33_01
-    100004: obj2_col32_01
-    100006: obj3_col11_01
-    100008: obj4_col23_01
-    100010: obj5_col23_02
-    100012: obj6_13_01
-    100014: obj7_11_01
-    100016: //RootNode
-    100018: Q4
-    400000: Floor4
-    400002: obj1_col33_01
-    400004: obj2_col32_01
-    400006: obj3_col11_01
-    400008: obj4_col23_01
-    400010: obj5_col23_02
-    400012: obj6_13_01
-    400014: obj7_11_01
-    400016: //RootNode
-    400018: Q4
-    2300000: Floor4
-    2300002: obj1_col33_01
-    2300004: obj2_col32_01
-    2300006: obj3_col11_01
-    2300008: obj4_col23_01
-    2300010: obj5_col23_02
-    2300012: obj6_13_01
-    2300014: obj7_11_01
-    3300000: Floor4
-    3300002: obj1_col33_01
-    3300004: obj2_col32_01
-    3300006: obj3_col11_01
-    3300008: obj4_col23_01
-    3300010: obj5_col23_02
-    3300012: obj6_13_01
-    3300014: obj7_11_01
-    4300000: obj1_col33_01
-    4300002: obj2_col32_01
-    4300004: obj3_col11_01
-    4300006: obj4_col23_01
-    4300008: obj5_col23_02
-    4300010: obj6_13_01
-    4300012: obj7_11_01
-    4300014: Floor4
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Ceiling_02
     9500000: //RootNode
   materials:
     importMaterials: 1
