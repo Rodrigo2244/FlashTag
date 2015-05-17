@@ -14,6 +14,7 @@ public class scriptGameManager : MonoBehaviour {
 	public bool stalactites;
 	public bool invisibility;
 	private Text playerWin;
+	private GameObject winScreen;
 
 
 	void Start(){
@@ -101,7 +102,9 @@ public class scriptGameManager : MonoBehaviour {
 			}
 		
 			gameStart = true;
-			print (players.Length);
+			winScreen = GameObject.Find("WinScreen");
+			winScreen.SetActive(false);
+			playerWin = GameObject.Find("PlayerWin").GetComponent<Text>();
 		}
 	}
 
@@ -129,7 +132,9 @@ public class scriptGameManager : MonoBehaviour {
 		{
 			if(players[i] != null)
 			{
-				print(players[i].name + " WINS");
+				//print(players[i].name + " WINS");
+				winScreen.SetActive(true);
+				playerWin.text = players[i].name + " Wins!";
 			}
 			
 		}
