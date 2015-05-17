@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour{
 	public GameObject[] layouts;
+	public GameObject[] ceilings;
 	public Quaternion[] rotations;
 	public Quaternion[] otherRotations;
 	public scriptGameManager manager;
@@ -26,6 +27,8 @@ public class Spawner : MonoBehaviour{
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(0,8.44f,24),otherRotations[Random.Range(0,otherRotations.Length)]);
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(-24,8.44f,0),otherRotations[Random.Range(0,otherRotations.Length)]);
 			Instantiate(layouts[Random.Range(0,layouts.Length)],new Vector3(-24,8.44f,24),otherRotations[Random.Range(0,otherRotations.Length)]);
+		} else {
+			Instantiate(ceilings[Random.Range(0,ceilings.Length)],new Vector3(-12,17.551f,12),new Quaternion(0,0,0,0));
 		}
 
 		if(!manager.invisibility){
