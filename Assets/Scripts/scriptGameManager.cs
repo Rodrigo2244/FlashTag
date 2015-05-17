@@ -14,6 +14,11 @@ public class scriptGameManager : MonoBehaviour {
 	public bool stalactites;
 	public bool invisibility;
 	private Text playerWin;
+	private GameObject p1Lose;
+	private GameObject p2Lose;
+	private GameObject p3Lose;
+	private GameObject p4Lose;
+
 
 
 	void Start(){
@@ -29,6 +34,9 @@ public class scriptGameManager : MonoBehaviour {
 				playerCam = GameObject.Find("P1Cam");
 				playerCamSet = playerCam.GetComponent<Camera>();
 				playerCamSet.rect = new Rect(0, 0.5f, 1, 0.5f);
+				p1Lose = GameObject.Find("P1Lose");
+				//p1Lose.transform.localScale = new Vector3(p1Lose.transform.parent.transform.position.x, p1Lose.transform.parent.transform.position.y, 0 );
+				p1Lose.transform.localPosition = new Vector3(0 , 0 , 0);
 				//P2
 				playerActivate = GameObject.Find("Player2");
 
@@ -51,6 +59,7 @@ public class scriptGameManager : MonoBehaviour {
 				playerCam = GameObject.Find("P1Cam");
 				playerCamSet = playerCam.GetComponent<Camera>();
 				playerCamSet.rect = new Rect(0, 0.5f, 0.5f, 0.5f);
+
 
 				playerActivate = GameObject.Find("Player2");
 
@@ -101,7 +110,7 @@ public class scriptGameManager : MonoBehaviour {
 			}
 		
 			gameStart = true;
-			print (players.Length);
+			playerWin = GameObject.Find("Winner").GetComponent<Text>();
 		}
 	}
 
@@ -129,7 +138,8 @@ public class scriptGameManager : MonoBehaviour {
 		{
 			if(players[i] != null)
 			{
-				print(players[i].name + " WINS");
+				//print(players[i].name + " WINS");
+				playerWin.text = players[i].name + " WINS!";
 			}
 			
 		}
