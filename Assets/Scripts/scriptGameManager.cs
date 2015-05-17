@@ -39,6 +39,8 @@ public class scriptGameManager : MonoBehaviour {
 				//P4
 				playerActivate = GameObject.Find ("Player4");
 				playerActivate.SetActive(false);
+
+				players = GameObject.FindGameObjectsWithTag("Player");
 			}
 			else if(playerNum == 3)
 			{
@@ -62,6 +64,8 @@ public class scriptGameManager : MonoBehaviour {
 
 				playerActivate = GameObject.Find ("Player4");
 				playerActivate.SetActive(false);
+
+				players = GameObject.FindGameObjectsWithTag("Player");
 
 			}
 			else if(playerNum == 4)
@@ -89,6 +93,8 @@ public class scriptGameManager : MonoBehaviour {
 				playerCam = GameObject.Find("P4Cam");
 				playerCamSet = playerCam.GetComponent<Camera>();
 				playerCamSet.rect = new Rect(0.5f , 0, 0.5f, 0.5f);
+
+				players = GameObject.FindGameObjectsWithTag("Player");
 
 			}
 		
