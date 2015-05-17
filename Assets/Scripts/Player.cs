@@ -19,13 +19,13 @@ public class Player : MonoBehaviour
         lives = 2;
 
         origin = transform.position;
-        weaponMaterial = weapon.GetComponent<MeshRenderer>().materials[2];
+//        weaponMaterial = weapon.GetComponent<MeshRenderer>().materials[2];
     }
 
     void Start()
     {
-        originalColor = weaponMaterial.color;
-        StartCoroutine("WeaponBlink");
+//        originalColor = weaponMaterial.color;
+//        StartCoroutine("WeaponBlink");
     }
 
     void OnCollisionEnter(Collision other)
