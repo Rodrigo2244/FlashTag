@@ -5,11 +5,46 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Floor1
     100002: //RootNode
+    100004: obj1_col33_02
+    100006: obj2_col32_02
+    100008: obj3_col11_02
+    100010: obj4_col23_02
+    100012: obj5_col23_03
+    100014: obj6_13_02
+    100016: obj7_11_02
     400000: Floor1
     400002: //RootNode
+    400004: obj1_col33_02
+    400006: obj2_col32_02
+    400008: obj3_col11_02
+    400010: obj4_col23_02
+    400012: obj5_col23_03
+    400014: obj6_13_02
+    400016: obj7_11_02
     2300000: Floor1
+    2300002: obj1_col33_02
+    2300004: obj2_col32_02
+    2300006: obj3_col11_02
+    2300008: obj4_col23_02
+    2300010: obj5_col23_03
+    2300012: obj6_13_02
+    2300014: obj7_11_02
     3300000: Floor1
+    3300002: obj1_col33_02
+    3300004: obj2_col32_02
+    3300006: obj3_col11_02
+    3300008: obj4_col23_02
+    3300010: obj5_col23_03
+    3300012: obj6_13_02
+    3300014: obj7_11_02
     4300000: Floor1
+    4300002: obj6_13_02
+    4300004: obj5_col23_03
+    4300006: obj4_col23_02
+    4300008: obj7_11_02
+    4300010: obj1_col33_02
+    4300012: obj3_col11_02
+    4300014: obj2_col32_02
     9500000: //RootNode
   materials:
     importMaterials: 1
